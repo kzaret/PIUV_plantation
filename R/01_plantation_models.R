@@ -1,4 +1,4 @@
-## EXPERIMENTAL PIUV PLANTATION EXPERIMENT
+## PIUV PLANTATION EXPERIMENT
 ## MODELING SPATIAL AND TEMPORAL EFFECTS ON SEEDLING GROWTH AND SURVIVAL
 ##
 ## Use (G)LMMs to estimate differences in seedling performance by patch and microhabitat, 
