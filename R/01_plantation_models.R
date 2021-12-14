@@ -57,7 +57,6 @@ epl <- epl_raw %>% rename(microhabitat = treat_simp) %>%
 #---------------------------------------------------------------------------
 
 # Base model
-
 lmer_gtht0 <- stan_lmer(growth_height ~ 1 + (1 | transect) + (1 | group) + (1 | seedling),
                        data = epl, 
                        chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
@@ -66,7 +65,6 @@ print(lmer_gtht0)
 summary(lmer_gtht0)
 
 # Patch effect
-
 lmer_gtht1 <- stan_lmer(growth_height ~ patch + (1 | transect) + (1 | group) + (1 | seedling),
                        data = epl, 
                        chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
@@ -75,7 +73,6 @@ print(lmer_gtht1)
 summary(lmer_gtht1)
 
 # Microhabitat effect
-
 lmer_gtht2 <- stan_lmer(growth_height ~ microhabitat + (1 | transect) + (1 | group) + (1 | seedling),
                        data = epl, 
                        chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
@@ -88,7 +85,6 @@ summary(lmer_gtht2)
 #---------------------------------------------------------------------------
 
 # Base model
-
 lmer_gsht0 <- stan_lmer(growth_subsurf ~ 1 + (1 | transect) + (1 | group) + (1 | seedling),
                         data = epl, 
                         chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
@@ -97,7 +93,6 @@ print(lmer_gsht0)
 summary(lmer_gsht0)
 
 # Patch effect
-
 lmer_gsht1 <- stan_lmer(growth_subsurf ~ patch + (1 | transect) + (1 | group) + (1 | seedling),
                         data = epl, 
                         chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
@@ -106,7 +101,6 @@ print(lmer_gsht1)
 summary(lmer_gsht1)
 
 # Microhabitat effect
-
 lmer_gsht2 <- stan_lmer(growth_subsurf ~ microhabitat + (1 | transect) + (1 | group) + (1 | seedling),
                         data = epl, 
                         chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
