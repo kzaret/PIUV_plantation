@@ -69,8 +69,7 @@ summary(lmer_gtht0)
 
 lmer_gtht1 <- stan_lmer(growth_height ~ patch + (1 | transect) + (1 | group) + (1 | seedling),
                        data = epl, 
-                       chains = getOption("mc.cores"), iter = 2000, warmup = 1000,
-                       control = list(adapt_delta = 0.95))
+                       chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
 
 print(lmer_gtht1)
 summary(lmer_gtht1)
@@ -79,8 +78,7 @@ summary(lmer_gtht1)
 
 lmer_gtht2 <- stan_lmer(growth_height ~ microhabitat + (1 | transect) + (1 | group) + (1 | seedling),
                        data = epl, 
-                       chains = getOption("mc.cores"), iter = 2000, warmup = 1000,
-                       control = list(adapt_delta = 0.95))
+                       chains = getOption("mc.cores"), iter = 2000, warmup = 1000)
 
 print(lmer_gtht2)
 summary(lmer_gtht2)
