@@ -3,7 +3,7 @@
 ##
 ## Use (G)LMMs to estimate differences in seedling performance by patch and microhabitat, 
 ## accounting for hierarchical spatial structure (transect / group / seedling / observation)
-## and temporal autocorrelation (repeated measurements of individuals seedlings).
+## and temporal autocorrelation (repeated measurements of individual seedlings).
 
 #===============================================================================
 # SETUP
@@ -53,7 +53,7 @@ epl <- epl_raw %>% rename(microhabitat = treat_simp) %>%
 # Larger candidate models add covariates (patch, microhabitat, distance on gradient?)
 
 #---------------------------------------------------------------------------
-# TOTAL HEIGHT
+# GROWTH RATE IN TOTAL HEIGHT
 #---------------------------------------------------------------------------
 
 # Base model
