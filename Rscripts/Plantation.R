@@ -1,8 +1,8 @@
-#Summary, visualization and analysis of experimental plantation data from the burned site (LC), 2013 - 2019. Oservations/measurements (of inconsistent type) made in 2013, 2014, 2016, 2017, 2018, 2019.
+#Summary, visualization and analysis of experimental plantation data from the burned site (LC), 2013 - 2019. Observations/measurements made (for some variables) in 2013, 2014, 2016, 2017, 2018, 2019.
 
-#Response variables: percent survival, total height, distance from substrate surface to tip, vigor (repeated measures over time).
+#Response variables: total height, substrate surface to tip, percent survival, vigor (repeated measures over time).
 
-#Predictor variables: patch, group, treatment.
+#Predictor variables: patch, [transect,] group, treatment [, seedling]
 
 #===============================================================================
 # SETUP
@@ -19,10 +19,6 @@ myPaths <- c(myPaths[2], myPaths[1])  # switch them
 library(here)
 library(dplyr)
 library(tidyverse)
-library(tsibble)
-library(feasts)
-library(lubridate)
-library(plotly)
 library(psych)
 library(nlme)
 
@@ -69,15 +65,6 @@ epl_bwpal <- RColorBrewer::brewer.pal(9, "Greys")[c(3, 5, 9)]
 #===============================================================================
 # Total height
 
-epl %>%
-  ggplot (aes(x=year_month, y=total_height, group=treat_simp, color=patch, shape=treat_simp)) +
-  stat_summary(fun = "mean", geom = "point", size=3) +
-  stat_summary(fun = "mean", geom = "line") +
-  theme_bw() +
-  theme(axis.text.x=element_text(angle=60, hjust=1)) +
-  ylab("Mean Total Height (cm)") +
-  xlab("Year-Month")
-
 
 epl %>%
   ggplot (aes(x=year_month, y=total_height, group=treat_simp, color=patch, linetype=treat_simp)) +
@@ -104,8 +91,6 @@ epl %>%
   ylab("Mean Distance from Substrate Surface to\n Seedling Tip (cm)") +
   xlab("Year-Month")
 
-
-# plots w/ error bars
 
 #===============================================================================
 # Percent survival
@@ -140,7 +125,7 @@ epl.ps %>%
 glimpse(epl)
 
 epl <- epl %>%
-  mutate(vigor2 = (vigor_all*-1))
+  mutate(vigor2 = (vigor_all*-1)) # re-order vigor categories so that 4 (dead/brown) is lowest, 1 is highest.
 View(epl)
 
 epl %>%
@@ -155,8 +140,10 @@ epl %>%
 
 
 #===============================================================================
-# Define model & conduct analysis of deviance
+# Define model & conduct analysis of deviance using same process as in ff?
+#https://rcompanion.org/handbook/I_09.html
 #===============================================================================
+
 
 ?corClasses
 
