@@ -1,0 +1,66 @@
+Variable,"Description, notes, etc.",,,,,
+year,"year when measurements taken (2013, 2014, 2016, 2017, 2018 or 2019)",,,,,
+year_month,year and month of sampling,,,,,
+patch,"patch type:  Cushion, Transition, Burned Forest",,,,,
+seedling,"seedling ID (indicates patch, transect, group, treatment; e.g., ZS01_01A = zona sphagnum (burned forest) patch, transect 1, group 1, treatment A (low position on sphagnum hummock))",,,,,
+group,"group ID (indicates patch and transect, see above example)",,,,,
+grouped,"binary:  1 if multiple seedlings placed together, each under different treatment condition; 0 if seedling placed singly",,,,,
+id2017,in 2017 I replaced zip ties marked with seedling IDs with larger tags into which IDs had been burned (rather than written),,,,,
+id2017_conf,my confidence in identifying individuals (since many of the labels written on the original zip ties were no longer visible/legible),,,,,
+dist_nedge,the location of the seedling from the northern edge of the transect along which established (to help re-locate individuals/groups),,,,,
+treat_det,original treatment categories recorded in field,,,,,
+treat_simp,simplified for analysis,,,,,
+root_sub_det,original root substrate categories,,,,,
+root_sub_simp,simplified,,,,,
+total height,ideally from root collar to tip,,,,,
+surf_water_depth,haphazardly recorded for seedlings in pool treatment in Cushion patch,,,,,
+green_height,"initially, I thought this could represent the ""new growth"" portion of a seedling stem, but there tended to be negative values in height from 13 to 16 as these portions of the stem developed bark; 2016 was the last measurement year.",,,,,
+sub_surf_to_tip,the distance from the substrate surface to the tip of tallest leader (if more than one leader) of a seedling,,,,,
+green_nodes1,number of green nodes on first leader,,,,,
+green_nodes2,number of green nodes on second leader,,,,,
+tip_nodes,"counting all of the green nodes was cumberson, so I decided to count just the newest nodes at the very tip of the tallest leader, but I didn't continue measuring this variable over time",,,,,
+health_orig,description of seedling color as indicator of health as originally recorded in the field,,,,,
+health,tidying / modificiation of above,,,,,
+vigor,ordinal classes based on health (see below); only assigned to first year in which a seedling was observed to be dead,,,,,
+vigor_all,"includes assignment of ""dead"" for all years for a dead seedling (e.g., if a seedling was first observed dead in 2016, ""dead"" was also recorded for years 2017, 2018 and 2019)",,,,,
+acounted_for,"binary:  1 if present or whose status was known to be dead, 0 if missing in action (not observed to have died); gives the total count of  seedlings whose status/vigor was known for a given year (i.e., all seedlings not missing in action)",,,,,
+present,"binary:  1 if present and observable in the field; 0 if missing in action or in second and subsequent years of being dead; note: ZS0701A wasn't found in 2016, but was subsequently, and was marked as present for 2016 though it wasn't actually observed/measured that year",,,,,
+newly_dead,"binary: 1 for year in which first observed to be dead, 0 if alive, blank/NA for subsequent years after death-year",,,,,
+dead,binary:  1 for all years in which seedling known to be dead; 0 if alive,,,,,
+damaged,"binary:  1 if leader or tip damaged, bent or dead (only in year when first observed); 0 if other; NA for dead seedlings in years after observed to be newly-dead; NA for missing seedlings",,,,,
+notes,notes,,,,,
+notes2,"two rounds of notes were collected in 2016; RC = ""root collar"" (i.e., when I was nearly certain I was measuring height from the root collart to the tip for total height; I was doing this by feel rather than pulling up seedlings or damaging substrate)",,,,,
+,,,,,,
+,,,,,,
+MISC. ADJUSTMENTS FOR ANALYSIS,,,,,,
+,,,,,,
+surface water depth,"sometimes recorded as <0.5 cm in 2019, changed to 0.25",,,,,
+,,,,,,
+Re health/vigor,,,,,,
+,"I think that if I recorded a seedling as ""green"" in 2019, it likely should be ""yellow-green"" or conservatively, ""green-yellow""; and ""vibrant green"" should be ""green"" (especially w/n the Burned Forest zone)",,,,,
+,"Likewise, anytime I used ""green"" as  in ""green-brown"" in 2019, it should probably be ""yellow-brown""",,,,,
+,"Or, given uncertainty, I could keep my vigor ordinal classes relatively coarse and encompassing:",,,,,
+,,,,,,
+,2013,2016,2017,2018,2019,Vigor
+,,,,,Vibrant green,1
+,Green,Green,Green,Green,Green,1
+,,,,Green-yellow,,1
+,,Green-brown,,Green-brown,Green-brown,1
+,,Yellow-green,Yellow-green,Yellow-green,Yellow-green,2
+,,Yellow-green/brown,Yellow-green/brown,,,2
+,,Yellow,Yellow,Yellow,Yellow,2
+,,Yellow-brown,Yellow-brown,Yellow-brown,Yellow-brown,2
+,,Brown-green,,Brown-green,Brown-green,3
+,,Brown/yellow-green,,,,3
+,,Brown-yellow,,Brown-yellow,Brown-yellow,3
+,,,Brown,Brown,Brown,4
+,,,Dead,Dead,Dead,4
+,,,,,,
+,,,,,,
+NOTE:,,,,,,
+keep an eye on ff seedlings in case of issues:  ,,,,,,
+,"ZS04_04A and B, no C individual",,,,,
+,"ZS07_01A couldn't find in 2016, but measured in 2017, 18 and 19; marked as accounted for (1) and present (1), not newly dead (0) nor dead (0) in 2016",,,,,
+,"Need subsurf to tip for ZS09_01B in 2017, recorded as 122",,,,,
+,"ZS09_04A, B, C:  I wasn't able to find these in 2016 but in 2019 thought maybe I'd found them but the tag numbers corresponded to seedlings on a different transect",,,,,
+,ZS07_01A,,,,,
